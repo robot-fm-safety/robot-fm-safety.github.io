@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<title>Trustworthy Embodied Foundation Models: Safety by Design versus Evaluation</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+	  <meta charset="utf-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1">
+	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+	<!-- Custom styles for this template -->
+
+
+	<link href="css/scrolling-nav.css" rel="stylesheet">
+	<link href="css/style.css" rel="author stylesheet">
+	    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-0M445FTS98"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-0M445FTS98');
+</script>
+    </head>
+
+    <body id="page-top">
+
+	<!-- Navigation -->
+	<nav class="navbar navbar-expand-lg navbar-light bg-light" id="mainNav">
+	    <div class="container bar-container">
+<!--		<a class="title-head" href="#page-top">Interactive Learning with Implicit Human Feedback</a>-->
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+		    <span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarResponsive">
+		    <ul class="navbar-nav ml-auto">
+				<li class="nav-item">
+				    <a class="nav-link js-scroll-trigger" href="#about">About</a>
+				</li>
+
+
+				<li class="nav-item">
+				    <a class="nav-link js-scroll-trigger" href="#organizers">Organizers</a>
+				</li>
+
+	
+		    </ul>
+		</div>
+	    </div>
+	</nav>
+
+	<header class="headercontainer bg-primary text-white" style="padding: 0%; max-height: none; ">
+	    <div style="background-color: rgba(160,160,160,0.0)" class="text-center">
+		<div style="padding-bottom: 6%; padding-top: 6%; background-image: url('images/sydney.jpg'); background-size: cover; background-position: center">
+
+	    <div class="container titlebox"; style="display: inline-block; background-color:rgba(0,0,0, 0.7); width:auto;">
+		<p style="text-align: center; margin-bottom: 2" class="title">Trustworthy Embodied Foundation Models:<br>Safety by Design versus Evaluation</p>
+		<p style="text-align: center; margin-bottom: 0" class="subtitle">Workshop RSS 2026</p>
+		<p style="text-align: center; margin-bottom: 0" class="subtitle">July 13-17, Sydney, Australia</p>
+		</div>
+	    </div>
+	    </div>
+	</header>
+
+	<hr class="half-rule"/>
+	<section id="about">
+	    <div class="container">
+		<div class="row">
+		    <div class="col-md-10 mx-auto">
+				<span class=titlesec>About</span>
+				<br>
+				<span>
+					Vision-Language-Action (VLA) models promise general-purpose robotic agents that can perceive their environment, understand instructions, and act in the physical world. These models leverage large-scale visual and textual training data and are fine-tuned to control robots across many tasks. The result is impressive breadth: single policies can fold laundry, set tables, fetch objects, and more. However, with this broad capability comes significant safety and robustness challenges. Recent studies are revealing that current VLA-based agents, despite their capabilities, can be brittle and sometimes unsafe when faced with the messy unpredictability of the real world [1, 2].
+					<br><br>
+					This workshop aims to bring together researchers and practitioners working on robotics foundation models (FMs) to initiate a discussion on safety and robustness for general-purpose embodied agents. We frame the space through two complementary lenses: safety by design (reducing risk at the source) and safety by evaluation (deployment-time evaluation and mitigation).
+					<br><br>
+					Robotics foundation models promise broad, general-purpose behavior, including out-of-the-box generalization and increasingly complex skills such as dexterous manipulation (e.g., laundry folding, barista-style tasks) and in-the-wild navigation and planning [1-3]. However, this breadth also brings new safety challenges. FM-based agents can misinterpret or hallucinate task-relevant details, fail to properly ground language in the physical scene, and struggle with real-world execution (e.g., contact dynamics, occlusions) [4-6]. They are also susceptible to adversarial jailbreak-style prompting that can induce unsafe behaviors [7]. In embodied settings, these failures can translate to unsafe motion, damaged property, and risky interactions with people, leading to loss of trust and reliability.
+					<br><br>
+					This workshop is timely because it will consolidate insights from recent works (2024–2026) on robust robotic policies. More importantly, one goal of this workshop is to start a community discussion around a shared taxonomy and toolbox for trustworthy embodied foundation models, organized around two complementary perspectives: (1) Safety by design, focusing on reducing risk at the source (e.g., training data, architectures, and objectives), and (2) Safety by practice, focusing on deployment-time evaluation and mitigation (e.g., runtime monitoring, red-teaming, shielding, and robust failure recovery systems).
+					<br><br>
+					The intended audience includes researchers and industry practitioners in robot learning, embodied AI, manipulation, and navigation, as well as the verification, controls, and HRI communities interested in accountable autonomy. We will draw presenters and panelists from sub-communities spanning robotics foundation models, robustness and evaluation, formal methods and runtime assurance, control and recovery, and human-in-the-loop autonomy deployed in real-world robotic domains.
+					<br><br>
+					We want the RSS community to actively engage with the safety implications of FM-based robots before such systems become mainstream in homes, hospitals, and workplaces. This workshop hopes to push towards consensus on evaluation standards and foster collaborations that address the key safety bottlenecks, helping shape the next generation of embodied AI on a safe, trustworthy foundation.
+				</span>
+
+		    </div>
+
+		</div>
+	    </div>
+	</section>
+
+
+
+
+<!--	<br>-->
+<!--	<hr class="half-rule"/>-->
+<!--<section id="callpapers">-->
+<!--	    <div class="container">-->
+<!--		<div class="row">-->
+<!--		    <div class="col-md-10 mx-auto">-->
+<!--		<span class=titlesec>Call for papers</span><br>-->
+<!--&lt;!&ndash;			   To be announced.&ndash;&gt;-->
+<!--				<span style="color:red">New: </span> The call for papers is now open.-->
+<!--			<br><br>-->
+<!--			<h5 style="font-weight: bold"> Areas of interest </h5>-->
+<!--			We solicit submissions related to (but not limited to) the following themes on interaction-grounded machine learning with humans:-->
+
+<!--			<br><br>-->
+<!--			<ul>-->
+<!--				<li style="padding-bottom: 10px"> Leveraging different types of human input modalities for interactive learning</li>-->
+<!--				<li style="padding-bottom: 10px"> Models and representations learned from human data</li>-->
+<!--				<li style="padding-bottom: 10px"> Online learning algorithms for human-machine collaboration</li>-->
+<!--				<li style="padding-bottom: 10px"> Personalized interaction-based learning</li>-->
+<!--				<li style="padding-bottom: 10px"> Theoretical advances for interactive learning with implicit human feedback</li>-->
+<!--				<li style="padding-bottom: 10px"> Interactive Learning with non-stationary rewards and environment dynamics</li>-->
+<!--				<li style="padding-bottom: 10px"> Applications for HCI and accessibility</li>-->
+<!--				<li style="padding-bottom: 10px"> Understanding how humans teach other humans and learning agents/embodied robots</li>-->
+
+<!--			</ul>-->
+<!--				All submissions will be managed through <a href="https://openreview.net/group?id=ICML.cc/2023/Workshop/ILHF">OpenReview</a>.-->
+<!--				The review process is double-blind so the submission should be anonymized.-->
+<!--				Papers should be a maximum of 8 pages (excluding references), and <a href="https://media.icml.cc/Conferences/ICML2023/Styles/icml2023.zip">formatted in ICML style</a>.-->
+<!--				Accepted papers will be presented as posters during the workshop and select works will be invited to give spotlight talks during the workshop.-->
+<!--				Accepted papers will be made available online on the workshop website as non-archival reports, allowing submissions to future conferences or journals.-->
+<!--			<br><br>-->
+<!--				Authors may optionally add appendices in their submitted paper.-->
+<!--				Supplementary Materials uploads are to only be used optionally for extra videos/code/data/figures and should be uploaded separately in the submission website.-->
+<!--			<br><br>-->
+
+<!--				Submissions will be evaluated based on novelty, rigor, and relevance to theme of the workshop. Both empirical and theoretical contributions are welcome.-->
+<!--				All participants must adhere to the ICML Code of Conduct.-->
+
+<!--						    <br><br>-->
+<!--			<h5 style="font-weight: bold"> Important Dates </h5>-->
+<!--			<ul>-->
+
+
+<!--			<li style="display: list-item">-->
+<!--				<b>Submission deadline:</b> May <s>24th</s> 31st, 2023, AoE.-->
+<!--			</li>-->
+<!--			<li style="display: list-item">-->
+<!--				<b>Author Notifications:</b> June 19th, 2023, AoE.-->
+
+
+<!--			</li>-->
+<!--				<li style="display: list-item">-->
+<!--					<b>Camera Ready:</b> July 10th, 2023, AoE.-->
+
+<!--			</li>-->
+<!--					<li style="display: list-item">-->
+<!--					<b>Workshop:</b> July 29th, 2023.-->
+
+<!--			</li>-->
+<!--			</ul>-->
+<!--	    </div>-->
+<!--		</div>-->
+<!--			</div>-->
+<!--		    </div>-->
+<!--		</div>-->
+<!--	</section>-->
+
+
+
+	<hr class="half-rule"/>
+	<section id="organizers">
+	    <div class="container">
+		<div class="row">
+		    <div class="col-md-10 mx-auto">
+
+		<span class=titlesec>Organizers</span><br>
+		<div class="row">
+
+			<a href='mailto:akanksha.saran@sony.com'>
+		    <div class="profpic xlarge-1 columns">
+			    <img src=images/organizers/akanksha.jpeg class="figure-img img-fluid ">
+			<p class=profname><a href="mailto:akanksha.saran@sony.com"> Akanksha Saran </a> </p>
+			<p class=institution> Sony AI </p>
+		    </div>
+			</a>
+
+			<a href='mailto:aaquibtabrez@cornell.edu'>
+		    <div class="profpic xlarge-1 columns">
+			    <img src=images/organizers/aaquib.jpeg class="figure-img img-fluid ">
+			<p class=profname><a href="mailto:aaquibtabrez@cornell.edu"> Aaquib Tabrez </a></p>
+			<p class=institution>Cornell</p>
+		    </div>
+			</a>
+
+			<a href='mailto:anushridixit@g.ucla.edu'>
+		    <div class="profpic xlarge-1 columns">
+			<img  src=images/organizers/anushri.jpeg class="figure-img img-fluid ">
+			<p class=profname>  <a href="mailto:anushridixit@g.ucla.edu"> Anushri Dixit </a> </p>
+			<p class=institution> UCLA </p>
+		    </div>
+			</a>
+
+		<a href='mailto:yuchencui@g.ucla.edu'>
+		    <div class="profpic xlarge-1 columns">
+			<img  src=images/organizers/yuchen.jpeg class="figure-img img-fluid ">
+			<p class=profname>  <a href="mailto:yuchencui@g.ucla.edu"> Yuchen Cui </a> </p>
+			<p class=institution> UCLA </p>
+		    </div>
+			</a>
+
+
+		</div>
+		<div class="row">
+
+			<a href='mailto:lioutikov@kit.edu'>
+		    <div class="profpic xlarge-1 columns">
+			    <img  src='images/organizers/rudolf.jpg' class="figure-img img-fluid ">
+			<p class="profname"> <a href="mailto:lioutikov@kit.edu"> Rudolf Lioutikov </a></p>
+			<p class=institution> KIT</p>
+		    </div>
+			</a>
+
+			<a href='mailto:hoffman@cornell.edu'>
+		    <div class="profpic xlarge-1 columns">
+			    <img  src='images/organizers/hoffman.jpg' class="figure-img img-fluid ">
+			<p class="profname"> <a href="mailto:hoffman@cornell.edu"> Guy Hoffman </a></p>
+			<p class=institution> Cornell</p>
+		    </div>
+			</a>
+
+<a href='https://orayyan.com/'>
+		    <div class="profpic xlarge-1 columns">
+			    <img  src='images/organizers/omar.jpg' class="figure-img img-fluid ">
+			<p class="profname"> <a href="https://orayyan.com/"> Omar Rayyan </a></p>
+			<p class=institution> UCLA </p>
+		    </div>
+			</a>
+
+			<a href='mailto:nils.blank@kit.edu'>
+		    <div class="profpic xlarge-1 columns">
+			    <img  src='images/organizers/nils.png' class="figure-img img-fluid ">
+			<p class="profname"> <a href="mailto:nils.blank@kit.edu"> Nils Blank </a></p>
+			<p class=institution> KIT </p>
+		    </div>
+			</a>
+
+		</div>
+
+
+
+		</div>
+</div>
+
+	</section>
+
+	<br>
+	<hr class="half-rule"/>
+	<section id="contact">
+	    <div class="container">
+		<div class="row">
+		    <div class="col-md-10 mx-auto">
+		<span class=titlesec>Contact</span><br>
+		Reach out to <a href="mailto:akankshasaran@utexas.edu">akankshasaran@utexas.edu</a> for any questions.
+	    </div>
+		</div>
+		</div>
+	</section>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js
+
+
+
+"> </script>
+
+	<!-- Custom JavaScript for this theme -->
+	<script src="js/scrolling-nav.js"></script>
+
+    </body>
+
+
+</html>
