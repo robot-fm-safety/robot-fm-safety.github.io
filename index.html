@@ -159,17 +159,13 @@
     <div class="section" id="overview">
       <h2>Overview</h2>
         <span>
-        Vision-Language-Action (VLA) models promise general-purpose robotic agents that can perceive their environment, understand instructions, and act in the physical world. These models leverage large-scale visual and textual training data and are fine-tuned to control robots across many tasks. The result is impressive breadth: single policies can fold laundry, set tables, fetch objects, and more. However, with this broad capability comes significant safety and robustness challenges. Recent studies are revealing that current VLA-based agents, despite their capabilities, can be brittle and sometimes unsafe when faced with the messy unpredictability of the real world [1, 2].
+    Foundation Models (FM) for robotics promise broad, general-purpose behavior, including out-of-the-box generalization and increasingly complex skills such as dexterous manipulation (e.g., laundry folding, barista-style tasks) and in-the-wild navigation and planning. However, this breadth also brings new safety challenges. FM-based agents can misinterpret or hallucinate task-relevant details, fail to properly ground language in the physical scene, and struggle with real-world execution (e.g., contact dynamics, occlusions). They are also susceptible to adversarial jailbreak-style prompting that can induce unsafe behaviors. In embodied settings, these failures can translate to unsafe motion, damaged property, and risky interactions with people, leading to loss of trust and reliability.
         <br><br>
-        This workshop aims to bring together researchers and practitioners working on robotics foundation models (FMs) to initiate a discussion on safety and robustness for general-purpose embodied agents. We frame the space through two complementary lenses: safety by design (reducing risk at the source) and safety by evaluation (deployment-time evaluation and mitigation).
+With several startups promising general-purpose household robots as early as next year, it remains unclear how FMs can be made robustly deployable in real-world settings. This makes our workshop timely in consolidating and expanding insights from recent works (2024–2026) on robust robotic policies. More importantly, one goal of this workshop is to start a community discussion around a shared taxonomy and toolbox for trustworthy embodied foundation models, organized around two complementary perspectives: (1) Safety by design, focusing on reducing risk at the source (e.g., training data, architectures, and objectives), and (2) Safety by practice, focusing on deployment-time evaluation and mitigation (e.g., runtime monitoring, red-teaming, shielding, and robust failure recovery systems).
         <br><br>
-        Robotics foundation models promise broad, general-purpose behavior, including out-of-the-box generalization and increasingly complex skills such as dexterous manipulation (e.g., laundry folding, barista-style tasks) and in-the-wild navigation and planning [1-3]. However, this breadth also brings new safety challenges. FM-based agents can misinterpret or hallucinate task-relevant details, fail to properly ground language in the physical scene, and struggle with real-world execution (e.g., contact dynamics, occlusions) [4-6]. They are also susceptible to adversarial jailbreak-style prompting that can induce unsafe behaviors [7]. In embodied settings, these failures can translate to unsafe motion, damaged property, and risky interactions with people, leading to loss of trust and reliability.
+The workshop targets researchers and practitioners working on learned robot autonomy and its safe deployment, spanning robot learning, controls, verification, and HRI. Presenters and panelists will be drawn from across these communities to ensure diverse perspectives on evaluation, assurance, and real-world accountability.
         <br><br>
-        This workshop is timely because it will consolidate insights from recent works (2024–2026) on robust robotic policies. More importantly, one goal of this workshop is to start a community discussion around a shared taxonomy and toolbox for trustworthy embodied foundation models, organized around two complementary perspectives: (1) Safety by design, focusing on reducing risk at the source (e.g., training data, architectures, and objectives), and (2) Safety by practice, focusing on deployment-time evaluation and mitigation (e.g., runtime monitoring, red-teaming, shielding, and robust failure recovery systems).
-        <br><br>
-        The intended audience includes researchers and industry practitioners in robot learning, embodied AI, manipulation, and navigation, as well as the verification, controls, and HRI communities interested in accountable autonomy. We will draw presenters and panelists from sub-communities spanning robotics foundation models, robustness and evaluation, formal methods and runtime assurance, control and recovery, and human-in-the-loop autonomy deployed in real-world robotic domains.
-        <br><br>
-        We want the RSS community to actively engage with the safety implications of FM-based robots before such systems become mainstream in homes, hospitals, and workplaces. This workshop hopes to push towards consensus on evaluation standards and foster collaborations that address the key safety bottlenecks, helping shape the next generation of embodied AI on a safe, trustworthy foundation.
+We want the RSS community to actively engage with the safety implications of FM-based robots before such systems become mainstream in homes, hospitals, and workplaces. This workshop hopes to push towards consensus on evaluation standards and foster collaborations that address the key safety bottlenecks, helping shape the next generation of embodied AI on a safe, trustworthy foundation.
     </span>
 
     </div>
@@ -323,7 +319,7 @@
         <center>
             <div class="row justify-content-center">
 
-            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12" style="padding-bottom: 30px;">
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12" style="padding-bottom: 30px;">
               <a href="https://faculty.cc.gatech.edu/~danfei/" target="_blank"><img src="images/speakers/profile_bajcsy.png" class="rounded-circle"
                   alt="Andrea Bajcsy" width="140" height="140" style="object-fit: cover; margin-bottom: 10px;"></a>
               <h5 style="margin-bottom:0em;"><a href="https://www.ri.cmu.edu/ri-faculty/andrea-bajcsy/" target="_blank">Andrea Bajcsy</a>
@@ -331,7 +327,7 @@
               Carnegie Mellon University <br>
             </div>
 
-            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12" style="padding-bottom: 30px;">
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12" style="padding-bottom: 30px;">
               <a href="https://emreugur.org/" target="_blank"><img src="images/speakers/profile_pavone.jpg"
                   class="rounded-circle" alt="Marco Pavone" width="140" height="140" style="object-fit: cover; margin-bottom: 10px;"></a>
               <h5 style="margin-bottom:0em;"><a href="https://stanfordasl.github.io//people/prof-marco-pavone/" target="_blank">Marco Pavone</a>
@@ -341,8 +337,15 @@
             </div>
 
 
-             <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12" style="padding-bottom: 30px;">
+             <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12" style="padding-bottom: 30px;">
 <a href="https://www.cse.iitd.ac.in/~rohanpaul/" target="_blank"><img src="images/speakers/profile_peters.jpg" class="rounded-circle" alt="Jan Peters" width="140" height="140" style="object-fit: cover; margin-bottom: 10px;"></a> <h5 style="margin-bottom:0em;"><a href="https://www.ias.informatik.tu-darmstadt.de/Member/JanPeters" target="_blank">Jan Peters</a> </h5> TU Darmstadt </br> <br> </div>
+
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12" style="padding-bottom: 30px;">
+              <a href="https://ralfroemer.com/" target="_blank"><img src="images/speakers/profile_romer.png" class="rounded-circle" alt="Ralf Römer" width="140" height="140" style="object-fit: cover; margin-bottom: 10px;"></a>
+              <h5 style="margin-bottom:0em;"><a href="https://ralfroemer.com/" target="_blank">Ralf Römer</a></h5>
+              PhD Student, TU Munich <br>
+              <br>
+            </div>
              <!-- <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12" style="padding-bottom: 30px;">
               <a href="https://www.cse.iitd.ac.in/~rohanpaul/" target="_blank"><img src="images/speakers/profile_peters.jpg"
                   class="rounded-circle" alt="Jan Peters" width="140" height="140" style="object-fit: cover;"></a>
@@ -370,57 +373,8 @@
         <center>
           <div class="row">
             <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12" style="padding-bottom: 30px;">
-              <a href="mailto:akanksha.saran@sony.com" target="_blank"><img src="images/organizers/akanksha.jpeg" class="rounded-circle"
-                  alt="Akanksha Saran" width="140" height="140" style="object-fit: cover;"></a>
-              <h5 style="margin-bottom:0em;"> <a href="mailto:akanksha.saran@sony.com" target="_blank">Akanksha Saran</a></h5>
-              Sony AI <br> 
-            </div>
-
-            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12" style="padding-bottom: 30px;">
-              <a href="mailto:aaquibtabrez@cornell.edu" target="_blank"><img src="images/organizers/aaquib.jpeg" class="rounded-circle"
-                  alt="Aaquib Tabrez" width="140" height="140" style="object-fit: cover;"></a>
-              <h5 style="margin-bottom:0em;"><a href="mailto:aaquibtabrez@cornell.edu" target="_blank">Aaquib Tabrez</a>
-              </h5>
-              Cornell <br> 
-            </div>
-
-            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12" style="padding-bottom: 30px;">
-              <a href="mailto:anushridixit@g.ucla.edu" target="_blank"><img src="images/organizers/anushri.jpeg" class="rounded-circle"
-                  alt="Anushri Dixit" width="140" height="140" style="object-fit: cover;"></a>
-              <h5 style="margin-bottom:0em;"><a href="mailto:anushridixit@g.ucla.edu" target="_blank">Anushri Dixit</a>
-              </h5>
-              UCLA <br> 
-            </div>
-
-            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12" style="padding-bottom: 30px;">
-              <a href="mailto:yuchencui@g.ucla.edu" target="_blank"><img src="images/organizers/yuchen.jpeg" class="rounded-circle"
-                  alt="Yuchen Cui" width="140" height="140" style="object-fit: cover;"></a>
-              <h5 style="margin-bottom:0em;"><a href="mailto:yuchencui@g.ucla.edu" target="_blank">Yuchen Cui</a>
-              </h5>
-              UCLA <br> 
-            </div>
-            
-          </div>
-          <div class="row">
-            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12" style="padding-bottom: 30px;">
-              <a href="mailto:lioutikov@kit.edu" target="_blank"><img src="images/organizers/rudolf.jpg" class="rounded-circle"
-                  alt="Rudolf Lioutikov" width="140" height="140" style="object-fit: cover;"></a>
-              <h5 style="margin-bottom:0em;"><a href="mailto:lioutikov@kit.edu" target="_blank">Rudolf Lioutikov</a>
-              </h5>
-              KIT <br>
-            </div>
-
-            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12" style="padding-bottom: 30px;">
-              <a href="mailto:hoffman@cornell.edu" target="_blank"><img src="images/organizers/hoffman.jpg" class="rounded-circle"
-                  alt="Guy Hoffman" width="140" height="140" style="object-fit: cover;"></a>
-              <h5 style="margin-bottom:0em;"><a href="mailto:hoffman@cornell.edu" target="_blank">Guy Hoffman</a>
-              </h5>
-              Cornell <br> 
-            </div>
-
-            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12" style="padding-bottom: 30px;">
               <a href="https://orayyan.com/" target="_blank"><img src="images/organizers/omar.jpg" class="rounded-circle"
-                  alt="Omar Rayyan" width="140" height="140" style="object-fit: cover;"></a>
+                  alt="Omar Rayyan" width="140" height="140" style="object-fit: cover; margin-bottom: 5px;"></a>
               <h5 style="margin-bottom:0em;"><a href="https://orayyan.com/" target="_blank">Omar Rayyan</a>
               </h5>
               UCLA <br> 
@@ -428,10 +382,59 @@
 
             <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12" style="padding-bottom: 30px;">
               <a href="mailto:nils.blank@kit.edu" target="_blank"><img src="images/organizers/nils.png" class="rounded-circle"
-                  alt="Nils Blank" width="140" height="140" style="object-fit: cover;"></a>
+                  alt="Nils Blank" width="140" height="140" style="object-fit: cover; margin-bottom: 5px;"></a>
               <h5 style="margin-bottom:0em;"><a href="mailto:nils.blank@kit.edu" target="_blank">Nils Blank</a>
               </h5>
               KIT <br> 
+            </div>
+
+            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12" style="padding-bottom: 30px;">
+              <a href="mailto:aaquibtabrez@cornell.edu" target="_blank"><img src="images/organizers/aaquib.jpeg" class="rounded-circle"
+                  alt="Aaquib Tabrez" width="140" height="140" style="object-fit: cover; margin-bottom: 5px;"></a>
+              <h5 style="margin-bottom:0em;"><a href="mailto:aaquibtabrez@cornell.edu" target="_blank">Aaquib Tabrez</a>
+              </h5>
+              Cornell <br> 
+            </div>
+
+            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12" style="padding-bottom: 30px;">
+              <a href="mailto:anushridixit@g.ucla.edu" target="_blank"><img src="images/organizers/anushri.jpeg" class="rounded-circle"
+                  alt="Anushri Dixit" width="140" height="140" style="object-fit: cover; margin-bottom: 5px;"></a>
+              <h5 style="margin-bottom:0em;"><a href="mailto:anushridixit@g.ucla.edu" target="_blank">Anushri Dixit</a>
+              </h5>
+              UCLA <br> 
+            </div>
+            
+          </div>
+          <div class="row">
+            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12" style="padding-bottom: 30px;">
+              <a href="mailto:yuchencui@g.ucla.edu" target="_blank"><img src="images/organizers/yuchen.jpeg" class="rounded-circle"
+                  alt="Yuchen Cui" width="140" height="140" style="object-fit: cover; margin-bottom: 5px;"></a>
+              <h5 style="margin-bottom:0em;"><a href="mailto:yuchencui@g.ucla.edu" target="_blank">Yuchen Cui</a>
+              </h5>
+              UCLA <br> 
+            </div>
+
+            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12" style="padding-bottom: 30px;">
+              <a href="mailto:akanksha.saran@sony.com" target="_blank"><img src="images/organizers/akanksha.jpeg" class="rounded-circle"
+                  alt="Akanksha Saran" width="140" height="140" style="object-fit: cover; margin-bottom: 5px;"></a>
+              <h5 style="margin-bottom:0em;"> <a href="mailto:akanksha.saran@sony.com" target="_blank">Akanksha Saran</a></h5>
+              Sony AI <br> 
+            </div>
+
+            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12" style="padding-bottom: 30px;">
+              <a href="mailto:lioutikov@kit.edu" target="_blank"><img src="images/organizers/rudolf.jpg" class="rounded-circle"
+                  alt="Rudolf Lioutikov" width="140" height="140" style="object-fit: cover; margin-bottom: 5px;"></a>
+              <h5 style="margin-bottom:0em;"><a href="mailto:lioutikov@kit.edu" target="_blank">Rudolf Lioutikov</a>
+              </h5>
+              KIT <br>
+            </div>
+
+            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12" style="padding-bottom: 30px;">
+              <a href="mailto:hoffman@cornell.edu" target="_blank"><img src="images/organizers/hoffman.jpg" class="rounded-circle"
+                  alt="Guy Hoffman" width="140" height="140" style="object-fit: cover; margin-bottom: 5px;"></a>
+              <h5 style="margin-bottom:0em;"><a href="mailto:hoffman@cornell.edu" target="_blank">Guy Hoffman</a>
+              </h5>
+              Cornell <br> 
             </div>
 
           </div>
