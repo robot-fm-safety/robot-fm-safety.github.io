@@ -101,6 +101,67 @@
       float: right;
     }
 
+    .abstract-toggle {
+      background-color: rgb(22, 58, 95) !important;
+      color: #ffffff !important;
+      border: none;
+      border-radius: 6px;
+      margin-bottom: 8px;
+      padding: 16px 46px 16px 18px;
+      font-size: 16px;
+      font-weight: 600;
+      text-align: left;
+      line-height: 1.35;
+      position: relative;
+      cursor: pointer;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    }
+
+    .abstract-toggle:hover,
+    .abstract-toggle.active {
+      background-color: rgb(15, 41, 68) !important;
+      color: #ffffff !important;
+    }
+
+    /* chevron affordance */
+    .abstract-toggle::after {
+      content: "\25BC";
+      position: absolute;
+      right: 18px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 12px;
+      transition: transform 0.2s ease;
+    }
+
+    .abstract-toggle.active::after {
+      transform: translateY(-50%) rotate(180deg);
+    }
+
+    .abstract-hint {
+      text-align: center;
+      color: #555;
+      font-size: 14px;
+      margin: 6px 0 16px 0;
+    }
+
+    .abstract-body {
+      background-color: #f4f6f9;
+      color: #111 !important;
+      border: 1px solid rgba(22, 58, 95, 0.2);
+      border-top: none;
+      border-radius: 0 0 6px 6px;
+      margin-top: -8px;
+      margin-bottom: 8px;
+    }
+
+    .abstract-body p {
+      padding: 16px 18px;
+      margin: 0;
+      color: #1b2430 !important;
+      line-height: 1.55;
+    }
+
     .section-divider {
       width: 95%;
       height: 3px;
@@ -146,6 +207,9 @@
         </li> -->
         <li class="nav-item">
           <a class="nav-link" href="index.html#speakers">Speakers</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="index.html#panelists">Panelists</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="index.html#committee">Organizers</a>
@@ -373,6 +437,12 @@ We want the RSS community to actively engage with the safety implications of FM-
               <h5 style="margin-bottom:0em;"><a href="https://ralfroemer.com/" target="_blank">Ralf Römer</a></h5>
               <div style="line-height: 1.2;">PhD Student <br>TU Munich</div>
             </div>
+
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12" style="padding-bottom: 30px;">
+              <a href="https://profiles.sydney.edu.au/ian.abraham" target="_blank"><img src="images/speakers/ian.jpg" class="rounded-circle" alt="Ian Abraham" width="140" height="140" style="object-fit: cover; margin-bottom: 10px;"></a>
+              <h5 style="margin-bottom:0em;"><a href="https://profiles.sydney.edu.au/ian.abraham" target="_blank">Ian Abraham</a></h5>
+              <div style="line-height: 1.2;">University of Sydney</div>
+            </div>
              <!-- <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12" style="padding-bottom: 30px;">
               <a href="https://www.cse.iitd.ac.in/~rohanpaul/" target="_blank"><img src="images/speakers/profile_peters.jpg"
                   class="rounded-circle" alt="Jan Peters" width="140" height="140" style="object-fit: cover;"></a>
@@ -382,6 +452,91 @@ We want the RSS community to actively engage with the safety implications of FM-
               <br>
             </div> -->
             <br /> <br />
+          </div>
+        </center>
+      </div>
+
+      <h4 style="text-align: center; margin-top: 30px;">Talk Abstracts</h4>
+      <p class="abstract-hint">Click a talk title to expand the abstract</p>
+
+      <div style="max-width: 850px; margin: 10px auto 0 auto; text-align: left;">
+
+        <button type="button" class="collapsible abstract-toggle">
+          Andrea Bajcsy &mdash; What Does Robustness Mean in the Era of Generalist Robots?
+        </button>
+        <div class="content abstract-body">
+          <p>There is a growing claim that generalist robot policies are becoming more robust. But what does robustness actually mean in this new era? In this talk, I argue that we are overlooking an important notion of &ldquo;outcome robustness&rdquo;: even for the same robot action, outcomes can vary depending on the physical world (e.g., dropping an open bag on a table may or may not spill its contents). But, for generalist robots that operate on high-dimensional perceptual inputs, reasoning about this rich space of outcomes requires predicting future observations, which is extremely challenging to model and optimize. To address this, I will present StressDream, an inference-time optimization algorithm that steers diffusion-based video world models toward high-impact yet plausible outcomes by optimizing over the initial noise. In manipulation and autonomous driving with state-of-the-art world models, I will discuss how StressDream enables robust policy evaluation and improvement.</p>
+        </div>
+
+        <button type="button" class="collapsible abstract-toggle">
+          Glen Chou &mdash; Massively Parallel Model-Based Control for Training and Steering Robotic Foundation Models
+        </button>
+        <div class="content abstract-body">
+          <p>Reliable deployment of robotic foundation models (FMs) requires mechanisms for recovery when learned policies leave the regimes covered by their data. In this talk, I will argue that massively parallel model-based control can provide a common backbone for both safety by design and safety by practice: generating safety-critical data before deployment, and enabling fast intervention during deployment. I will first discuss our work on GPU-parallelized robust MPC, where physics simulation and parallel reachability analysis are used to synthesize controllers and safety certificates for high-dimensional robotic systems, from humanoids to deformable-object manipulation. These robust controllers can be used to produce safe recovery demonstrations for FM finetuning. I will then discuss our recent work showing that classical linear control can be surprisingly effective inside foundation models themselves: by modeling local activation dynamics, we can steer the internal states of world-action models at deployment time to improve robustness under out-of-distribution perturbations. Finally, I will close with perspectives and future opportunities.</p>
+        </div>
+
+        <button type="button" class="collapsible abstract-toggle">
+          Ralf Römer &mdash; Knowing What Your Robot Doesn't Know: Safe Deployment and Continual Improvement of Embodied Foundation Models
+        </button>
+        <div class="content abstract-body">
+          <p>Generative policies, such as diffusion policies and VLAs, have demonstrated impressive capabilities in solving complex, long-horizon tasks. Yet deploying them in the real world, where robots must continually adapt to novel situations without compromising safety, remains a major challenge. In this talk, I argue for addressing safety and adaptation through a unifying lens: uncertainty awareness. I first show how safety can be enforced on generative policies at deployment time without sacrificing task performance. I then discuss estimating uncertainty in these policies and how it can be leveraged for runtime failure prediction and collecting the most informative data. Finally, I present recent work toward generalist policies that can actively and continually improve.</p>
+        </div>
+
+        <button type="button" class="collapsible abstract-toggle">
+          Ian Abraham &mdash; TBA
+        </button>
+        <div class="content abstract-body">
+          <p>Abstract to be announced.</p>
+        </div>
+
+      </div>
+
+    </div>
+
+    <hr class="section-divider">
+
+    <div class="section speakers-block" id="panelists" style="text-align: center;">
+      <h2>Panelists</h2>
+      <div class="grid">
+        <center>
+          <div class="row justify-content-center">
+
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12" style="padding-bottom: 30px;">
+              <a href="https://glenchou.github.io" target="_blank"><img src="images/speakers/glen.png" class="rounded-circle" alt="Glen Chou" width="140" height="140" style="object-fit: cover; margin-bottom: 10px;"></a>
+              <h5 style="margin-bottom:0em;"><a href="https://glenchou.github.io" target="_blank">Glen Chou</a></h5>
+              <div style="line-height: 1.2;">Assistant Professor Georgia Tech</div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12" style="padding-bottom: 30px;">
+              <a href="https://ralfroemer.com/" target="_blank"><img src="images/speakers/profile_romer.png" class="rounded-circle" alt="Ralf Römer" width="140" height="140" style="object-fit: cover; margin-bottom: 10px;"></a>
+              <h5 style="margin-bottom:0em;"><a href="https://ralfroemer.com/" target="_blank">Ralf Römer</a></h5>
+              <div style="line-height: 1.2;">PhD Student <br>TU Munich</div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12" style="padding-bottom: 30px;">
+              <a href="https://profiles.sydney.edu.au/ian.abraham" target="_blank"><img src="images/speakers/ian.jpg" class="rounded-circle" alt="Ian Abraham" width="140" height="140" style="object-fit: cover; margin-bottom: 10px;"></a>
+              <h5 style="margin-bottom:0em;"><a href="https://profiles.sydney.edu.au/ian.abraham" target="_blank">Ian Abraham</a></h5>
+              <div style="line-height: 1.2;">University of Sydney</div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12" style="padding-bottom: 30px;">
+              <a href="https://www.xuningyang.com/" target="_blank"><img src="images/panelists/xuning.jpg" class="rounded-circle" alt="Xuning Yang" width="140" height="140" style="object-fit: cover; margin-bottom: 10px;"></a>
+              <h5 style="margin-bottom:0em;"><a href="https://www.xuningyang.com/" target="_blank">Xuning Yang</a></h5>
+              <div style="line-height: 1.2;">Senior Research Scientist <br>NVIDIA</div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12" style="padding-bottom: 30px;">
+              <a href="https://jonasfrey96.github.io/" target="_blank"><img src="images/panelists/jonas.jpg" class="rounded-circle" alt="Jonas Frey" width="140" height="140" style="object-fit: cover; margin-bottom: 10px;"></a>
+              <h5 style="margin-bottom:0em;"><a href="https://jonasfrey96.github.io/" target="_blank">Jonas Frey</a></h5>
+              <div style="line-height: 1.2;">Postdoc <br>Stanford &amp; UC Berkeley</div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12" style="padding-bottom: 30px;">
+              <a href="https://www.professoren.tum.de/en/khadiv-majid" target="_blank"><img src="images/panelists/majid.jpg" class="rounded-circle" alt="Majid Khadiv" width="140" height="140" style="object-fit: cover; margin-bottom: 10px;"></a>
+              <h5 style="margin-bottom:0em;"><a href="https://www.professoren.tum.de/en/khadiv-majid" target="_blank">Majid Khadiv</a></h5>
+              <div style="line-height: 1.2;">Professor <br>TU Munich</div>
+            </div>
+
           </div>
         </center>
       </div>
